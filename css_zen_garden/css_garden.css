@@ -1,0 +1,342 @@
+ * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Manrope','EB Garamond', 'Playfair Display SC';
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+@media(max-width:768px){
+    #zen-preamble::before{
+        width: 100%;
+        float: none;
+    }
+    #zen-preamble{
+        width: 100%;
+        float: none;
+    }
+    p{
+        float: none;
+        width: 100%;
+    }
+    #zen-participation::before{
+        background-position: bottom;
+        background-size: contain;
+        background-attachment: fixed;
+        width: 250%;
+        height: 60%;
+        position: absolute;
+        top:0%;
+        left: -100%;
+    }
+    #zen-participation{
+        display: flex;
+        flex-direction: column;
+        width: 32%;
+        height: auto;
+        position: absolute;
+        top: 220%;
+        left: 54%;
+        overflow: hidden;
+    }
+    .extra3{
+        background: url(./image/g-02.png) no-repeat center;
+        background-size: contain;
+        width: 100%;
+        height: 130%;
+        position: absolute;
+        top: 200%;
+        left: 40%;
+        z-index: 4;
+        filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.2));
+    }
+    
+}
+
+body{
+    position: relative;
+}
+
+h1{
+    font-family: Playfair Display SC;
+    font-size: 3rem;
+}
+
+
+
+#banner{
+    background: url(./image/未命名-1-01.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    /* overflow: hidden; 要+ position: relative; */
+    overflow: hidden;
+    position: relative;
+}
+
+
+#banner::after{
+    content: '';
+    background: url('./image/未命名-2-01.png') no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#banner:hover::after{
+    opacity: 0.8;
+    transition: 0.2s;
+    top: 2%;
+}
+
+
+/* 進入畫面 */
+.extra1{
+    position: fixed;
+    transition: opacity 1s;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.2em;
+    font-family: Playfair Display SC;
+    color: #dddddd;
+    background: url('https://images.unsplash.com/photo-1491147334573-44cbb4602074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    line-height: 100vh;
+    z-index: 999;
+}
+
+.extra1 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 3s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg); 
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg); 
+    }
+}
+
+
+/* zen-summary */
+
+#zen-summary{
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 20%;
+    height: 300px;
+    width: 60%;
+    overflow:hidden;
+    z-index: 20;
+    font-family: Playfair Display SC;
+    display: none;
+}
+
+/* zen-preamble */
+#zen-preamble::before{
+    content: '';
+    background: url('./image/3297-01.png') center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-right: 10px;
+}
+#zen-preamble{
+    filter: grayscale(10);
+    opacity: 0.6;
+    padding:10px;
+    float: right;
+    line-height: 38px;
+}
+
+#zen-preamble h3{
+    background: url('https://images.unsplash.com/photo-1491147334573-44cbb4602074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80');
+    font-size: 2rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#zen-preamble:hover{
+    opacity: 0.9;
+    filter: grayscale(0);
+}
+
+/* zen-explanation */
+
+#zen-explanation{
+    background: url('./image/未命名-2-01.png')no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    clear: both;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#zen-explanation h3{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-family: Playfair Display SC;
+    font-size: 2rem;
+    color: #1C6021;
+}
+#zen-explanation p{
+    width: 80%;
+}
+
+/* zen-participation + zen-benefits */
+#zen-participation{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    height: auto;
+    position: absolute;
+    top: 220%;
+    left: 54%;
+}
+
+#zen-participation::before{
+    content: '';
+    background: url(./image/sarah-unsplash.jpg)no-repeat bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 250%;
+    height: 500px;
+    position: absolute;
+    top:-15%;
+    left: -150%;
+    z-index: -1;
+}
+
+
+#zen-benefits{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    position: absolute;
+    top: 282%;
+    left: 54%;
+}
+
+.extra3{
+    background: url(./image/g-02.png) no-repeat center;
+    background-size: contain;
+    width: 60%;
+    height: 130%;
+    position: absolute;
+    top: 200%;
+    left: 40%;
+    z-index: 3;
+    filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.2));
+    overflow: hidden;
+}
+
+
+/* zen-requirements */
+#zen-requirements{
+    float: left;
+    width: 39%;
+    position: absolute;
+    top: 282%;
+    left: 10%;
+}
+
+
+
+#zen-requirements::after{
+    content: '';
+    background: url(./image/leaf3-01.png)no-repeat center;
+    background-size: contain;
+    width: 65%;
+    height: 60%;
+    position: absolute;
+    bottom: -10%;
+    left: 140%;
+}
+
+
+/* sidebar */
+
+#sidebar{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:rgba(255,255, 255, 0.8);
+    z-index: 99;
+    padding: 2px;
+    position: fixed;
+    display: none;
+}
+
+.extra2{
+    width: 80px;
+    height: 80px;
+    background: url(./image/leaf-01.png) no-repeat center;
+    background-size: cover;
+    position: fixed;
+    top: 0%;
+    left: 1%;
+    z-index: 99;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+    opacity: 0.5;
+}
+
+.extra2:hover{
+    opacity: 1;
+}
+.extra2:active{
+    top: 1%;
+    left: 3%;
+}
+
+/* footer */
+
+#footer{
+    position: absolute;
+    left: 0;
+    bottom: -310%;
+    background: black;
+    width: 100%;
+    height: 5%;
+    clear: both;
+    text-align: center;
+}
+
+#footer a{
+    color: beige;
+    margin-right: 5px;
+}

@@ -110,7 +110,8 @@ h1{
 /* 進入畫面 */
 .extra1{
     position: fixed;
-    transition: opacity 1s;
+    top: 0;
+    /* transition: opacity 1s; */
     text-align: center;
     font-size: 4rem;
     letter-spacing: 0.2em;
